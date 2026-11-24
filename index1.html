@@ -1,0 +1,61 @@
+kubectl version	Check Kubernetes version
+kubectl cluster-info	Display cluster information
+kubectl get nodes	Display cluster nodes
+kubectl get pods	List pods
+kubectl get pods -A	List pods in all namespaces
+kubectl get services	List services
+kubectl get deployments	List deployments
+kubectl get namespaces	List namespaces
+
+
+2. Pod Commands
+A Pod is the smallest deployable unit in Kubernetes.
+Command	Purpose
+kubectl get pods	List pods
+kubectl describe pod podname	Display pod details
+kubectl logs podname	View pod logs
+kubectl exec -it podname -- sh	Enter pod container
+kubectl delete pod podname	Delete pod
+kubectl run nginx --image=nginx	Create nginx pod
+kubectl get pods -o wide	Show pod details and IP
+
+3. Deployment Commands
+A Deployment manages multiple replicas of pods.
+Command	Purpose
+kubectl create deployment nginx --image=nginx	Create deployment
+kubectl get deployments	List deployments
+kubectl describe deployment nginx	Display deployment details
+kubectl scale deployment nginx --replicas=3	Scale to 3 replicas
+kubectl rollout status deployment/nginx	Check deployment status
+kubectl rollout history deployment/nginx	View rollout history
+kubectl rollout undo deployment/nginx	Undo latest rollout
+kubectl delete deployment nginx	Delete deployment
+
+4. Service Commands
+Services expose applications running inside pods.
+Command	Purpose
+kubectl get svc	List services
+kubectl expose deployment nginx --port=80 --type=NodePort	Expose deployment
+kubectl describe svc nginx	Display service details
+kubectl delete svc nginx	Delete service
+
+5. Apply and Delete YAML Files
+Command	Purpose
+kubectl apply -f file.yaml	Create/update resources
+kubectl create -f file.yaml	Create resources
+kubectl delete -f file.yaml	Delete resources
+kubectl get all	List common resources
+kubectl edit deployment nginx	Edit deployment
+kubectl get pods -w	Watch pod changes
+
+
+6. Minikube Commands
+Minikube is used to run a local Kubernetes cluster.
+Command	Purpose
+minikube start	Start cluster
+minikube stop	Stop cluster
+minikube status	Check status
+minikube delete	Delete cluster
+minikube dashboard	Open dashboard
+minikube ip	Display cluster IP
+minikube service nginx	Open service
