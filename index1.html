@@ -1,61 +1,113 @@
-kubectl version	Check Kubernetes version
-kubectl cluster-info	Display cluster information
-kubectl get nodes	Display cluster nodes
-kubectl get pods	List pods
-kubectl get pods -A	List pods in all namespaces
-kubectl get services	List services
-kubectl get deployments	List deployments
-kubectl get namespaces	List namespaces
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kubernetes Commands</title>
+</head>
+<body>
 
+    <h1>Kubernetes Commands</h1>
 
-2. Pod Commands
-A Pod is the smallest deployable unit in Kubernetes.
-Command	Purpose
-kubectl get pods	List pods
-kubectl describe pod podname	Display pod details
-kubectl logs podname	View pod logs
-kubectl exec -it podname -- sh	Enter pod container
-kubectl delete pod podname	Delete pod
-kubectl run nginx --image=nginx	Create nginx pod
-kubectl get pods -o wide	Show pod details and IP
+    <h2>1. Basic Kubernetes Commands</h2>
 
-3. Deployment Commands
-A Deployment manages multiple replicas of pods.
-Command	Purpose
-kubectl create deployment nginx --image=nginx	Create deployment
-kubectl get deployments	List deployments
-kubectl describe deployment nginx	Display deployment details
-kubectl scale deployment nginx --replicas=3	Scale to 3 replicas
-kubectl rollout status deployment/nginx	Check deployment status
-kubectl rollout history deployment/nginx	View rollout history
-kubectl rollout undo deployment/nginx	Undo latest rollout
-kubectl delete deployment nginx	Delete deployment
+    <table border="1" cellpadding="8">
+        <tr>
+            <th>Command</th>
+            <th>Purpose</th>
+        </tr>
+        <tr><td>kubectl version</td><td>Check Kubernetes version</td></tr>
+        <tr><td>kubectl cluster-info</td><td>Display cluster information</td></tr>
+        <tr><td>kubectl get nodes</td><td>Display cluster nodes</td></tr>
+        <tr><td>kubectl get pods</td><td>List pods</td></tr>
+        <tr><td>kubectl get pods -A</td><td>List pods in all namespaces</td></tr>
+        <tr><td>kubectl get services</td><td>List services</td></tr>
+        <tr><td>kubectl get deployments</td><td>List deployments</td></tr>
+        <tr><td>kubectl get namespaces</td><td>List namespaces</td></tr>
+    </table>
 
-4. Service Commands
-Services expose applications running inside pods.
-Command	Purpose
-kubectl get svc	List services
-kubectl expose deployment nginx --port=80 --type=NodePort	Expose deployment
-kubectl describe svc nginx	Display service details
-kubectl delete svc nginx	Delete service
+    <h2>2. Pod Commands</h2>
 
-5. Apply and Delete YAML Files
-Command	Purpose
-kubectl apply -f file.yaml	Create/update resources
-kubectl create -f file.yaml	Create resources
-kubectl delete -f file.yaml	Delete resources
-kubectl get all	List common resources
-kubectl edit deployment nginx	Edit deployment
-kubectl get pods -w	Watch pod changes
+    <p>A Pod is the smallest deployable unit in Kubernetes.</p>
 
+    <table border="1" cellpadding="8">
+        <tr>
+            <th>Command</th>
+            <th>Purpose</th>
+        </tr>
+        <tr><td>kubectl get pods</td><td>List pods</td></tr>
+        <tr><td>kubectl describe pod podname</td><td>Display pod details</td></tr>
+        <tr><td>kubectl logs podname</td><td>View pod logs</td></tr>
+        <tr><td>kubectl exec -it podname -- sh</td><td>Enter pod container</td></tr>
+        <tr><td>kubectl delete pod podname</td><td>Delete pod</td></tr>
+        <tr><td>kubectl run nginx --image=nginx</td><td>Create nginx pod</td></tr>
+        <tr><td>kubectl get pods -o wide</td><td>Show pod details and IP</td></tr>
+    </table>
 
-6. Minikube Commands
-Minikube is used to run a local Kubernetes cluster.
-Command	Purpose
-minikube start	Start cluster
-minikube stop	Stop cluster
-minikube status	Check status
-minikube delete	Delete cluster
-minikube dashboard	Open dashboard
-minikube ip	Display cluster IP
-minikube service nginx	Open service
+    <h2>3. Deployment Commands</h2>
+
+    <p>A Deployment manages multiple replicas of pods.</p>
+
+    <table border="1" cellpadding="8">
+        <tr>
+            <th>Command</th>
+            <th>Purpose</th>
+        </tr>
+        <tr><td>kubectl create deployment nginx --image=nginx</td><td>Create deployment</td></tr>
+        <tr><td>kubectl get deployments</td><td>List deployments</td></tr>
+        <tr><td>kubectl describe deployment nginx</td><td>Display deployment details</td></tr>
+        <tr><td>kubectl scale deployment nginx --replicas=3</td><td>Scale to 3 replicas</td></tr>
+        <tr><td>kubectl rollout status deployment/nginx</td><td>Check deployment status</td></tr>
+        <tr><td>kubectl rollout history deployment/nginx</td><td>View rollout history</td></tr>
+        <tr><td>kubectl rollout undo deployment/nginx</td><td>Undo latest rollout</td></tr>
+        <tr><td>kubectl delete deployment nginx</td><td>Delete deployment</td></tr>
+    </table>
+
+    <h2>4. Service Commands</h2>
+
+    <p>Services expose applications running inside pods.</p>
+
+    <table border="1" cellpadding="8">
+        <tr>
+            <th>Command</th>
+            <th>Purpose</th>
+        </tr>
+        <tr><td>kubectl get svc</td><td>List services</td></tr>
+        <tr><td>kubectl expose deployment nginx --port=80 --type=NodePort</td><td>Expose deployment</td></tr>
+        <tr><td>kubectl describe svc nginx</td><td>Display service details</td></tr>
+        <tr><td>kubectl delete svc nginx</td><td>Delete service</td></tr>
+    </table>
+
+    <h2>5. Apply and Delete YAML Files</h2>
+
+    <table border="1" cellpadding="8">
+        <tr>
+            <th>Command</th>
+            <th>Purpose</th>
+        </tr>
+        <tr><td>kubectl apply -f file.yaml</td><td>Create/update resources</td></tr>
+        <tr><td>kubectl create -f file.yaml</td><td>Create resources</td></tr>
+        <tr><td>kubectl delete -f file.yaml</td><td>Delete resources</td></tr>
+        <tr><td>kubectl get all</td><td>List common resources</td></tr>
+        <tr><td>kubectl edit deployment nginx</td><td>Edit deployment</td></tr>
+        <tr><td>kubectl get pods -w</td><td>Watch pod changes</td></tr>
+    </table>
+
+    <h2>6. Minikube Commands</h2>
+
+    <p>Minikube is used to run a local Kubernetes cluster.</p>
+
+    <table border="1" cellpadding="8">
+        <tr>
+            <th>Command</th>
+            <th>Purpose</th>
+        </tr>
+        <tr><td>minikube start</td><td>Start cluster</td></tr>
+        <tr><td>minikube stop</td><td>Stop cluster</td></tr>
+        <tr><td>minikube status</td><td>Check status</td></tr>
+        <tr><td>minikube delete</td><td>Delete cluster</td></tr>
+        <tr><td>minikube dashboard</td><td>Open dashboard</td></tr>
+        <tr><td>minikube ip</td><td>Display cluster IP</td></tr>
+        <tr><td>minikube service nginx</td><td>Open service</td></tr>
+    </table>
+
+</body>
+</html>
