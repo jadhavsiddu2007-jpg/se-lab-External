@@ -1,38 +1,66 @@
-welcome to git and github
-welcomed by jadhav siddu
-we are preparing for lab external exam
-se lab exam will be though as u think 
-Command	Purpose
-docker --version	Check Docker version
-docker info	Display Docker information
-docker login	Login to Docker Hub
-docker logout	Logout from Docker Hub
-docker help	Display help
-docker images	List all images
-docker pull nginx	Download an image
-docker build -t myapp .	Build an image
-docker rmi image_name	Remove an image
-docker tag myapp username/myapp:v1	Tag an image
-docker push username/myapp:v1	Push image to Docker Hub
-docker history image_name	Display image history
-docker run -d -p 8080:80 nginx	Map host port 8080 to container port 80
-docker start container_id	Start container
-docker stop container_id	Stop container
-docker restart container_id	Restart container
-docker rm container_id	Remove container
-docker logs container_id
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Git and Docker Lab Preparation</title>
+</head>
+<body>
+
+    <h1>Welcome to Git and GitHub</h1>
+
+    <p>Welcome by Jadhav Siddu</p>
+    <p>We are preparing for lab external exam.</p>
+    <p>SE lab exam will be tough as you think.</p>
+
+    <h2>Docker Commands</h2>
+
+    <table border="1" cellpadding="8">
+        <tr>
+            <th>Command</th>
+            <th>Purpose</th>
+        </tr>
+        <tr><td>docker --version</td><td>Check Docker version</td></tr>
+        <tr><td>docker info</td><td>Display Docker information</td></tr>
+        <tr><td>docker login</td><td>Login to Docker Hub</td></tr>
+        <tr><td>docker logout</td><td>Logout from Docker Hub</td></tr>
+        <tr><td>docker help</td><td>Display help</td></tr>
+        <tr><td>docker images</td><td>List all images</td></tr>
+        <tr><td>docker pull nginx</td><td>Download an image</td></tr>
+        <tr><td>docker build -t myapp .</td><td>Build an image</td></tr>
+        <tr><td>docker rmi image_name</td><td>Remove an image</td></tr>
+        <tr><td>docker tag myapp username/myapp:v1</td><td>Tag an image</td></tr>
+        <tr><td>docker push username/myapp:v1</td><td>Push image to Docker Hub</td></tr>
+        <tr><td>docker history image_name</td><td>Display image history</td></tr>
+        <tr><td>docker run -d -p 8080:80 nginx</td><td>Map host port 8080 to container port 80</td></tr>
+        <tr><td>docker start container_id</td><td>Start container</td></tr>
+        <tr><td>docker stop container_id</td><td>Stop container</td></tr>
+        <tr><td>docker restart container_id</td><td>Restart container</td></tr>
+        <tr><td>docker rm container_id</td><td>Remove container</td></tr>
+        <tr><td>docker logs container_id</td><td>View container logs</td></tr>
+    </table>
+
+    <h2>Dockerfile</h2>
+
+    <pre>
 FROM nginx:latest
 WORKDIR /usr/share/nginx/html
 COPY index.html .
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
+    </pre>
 
-DOCKER COMPOSE
-docker compose up -d	Start in background
-docker compose down	Stop and remove services
-docker compose ps	List services
-docker compose images	List service images
-docker compose logs	View logs
+    <h2>Docker Compose Commands</h2>
+
+    <pre>
+docker compose up -d
+docker compose down
+docker compose ps
+docker compose images
+docker compose logs
+    </pre>
+
+    <h2>Docker Compose YAML</h2>
+
+    <pre>
 services:
   web:
     image: nginx:latest
@@ -43,3 +71,7 @@ services:
     image: mysql:8
     environment:
       MYSQL_ROOT_PASSWORD: root123
+    </pre>
+
+</body>
+</html>
